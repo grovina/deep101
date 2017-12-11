@@ -10,6 +10,8 @@ from keras.utils import to_categorical
 import numpy as np
 
 
+LENGTH = 100
+
 # # # # # # # #
 #  D A D O S  #
 # # # # # # # #
@@ -26,10 +28,9 @@ char_to_int = {c: i for i, c in enumerate(chars)}
 pk.dump(chars, open('text.pk', 'wb'))
 
 # geramos os exemplos "sequencia -> proxima letra"
-length = 5
 x, y = [], []
-word = text[:length]
-for letter in text[length:]:
+word = text[:LENGTH]
+for letter in text[LENGTH:]:
     x.append([char_to_int[w] for w in word])
     y.append(char_to_int[letter])
     word = word[1:] + letter
@@ -57,7 +58,7 @@ y_train, y_test = y[:i], y[i:]
 out = entry = Input(shape=x_train.shape[1:])
 
 # camada de memória
-out = LSTM(128)(out)
+out = LSTM(256)(out)
 
 # camada de saída com um neurônio para cada caractere
 out = Dense(y_train.shape[1])(out)
