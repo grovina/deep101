@@ -2,3 +2,4 @@
 *.h5
 *.pk
 logs/
+*-checkpoint.ipynb
