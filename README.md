@@ -21,3 +21,8 @@ Para rodar o TensorBoard de dentro do container:
 
 - Adicione `-p 6006:6006` ao comando de rodar o docker
 - Lance o TensorBoard com o comando acima dentro do container
+
+
+### Apresentação
+
+https://goo.gl/5qEtAE
