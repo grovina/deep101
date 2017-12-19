@@ -26,3 +26,10 @@ Para rodar o TensorBoard de dentro do container:
 ### Apresentação
 
 https://goo.gl/5qEtAE
+
+
+### Dissecando uma rede simples
+
+Exemplo que mostra pesos, ativações e saída, permitindo modificar a entrada.
+
+https://goo.gl/g8pq32
